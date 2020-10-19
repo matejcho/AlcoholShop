@@ -1,0 +1,527 @@
+object Form4: TForm4
+  Left = 750
+  Height = 600
+  Top = 150
+  Width = 800
+  Caption = 'Alcohol Shop'
+  ClientHeight = 600
+  ClientWidth = 800
+  Color = clBtnShadow
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 368
+    Top = 92
+    Width = 328
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'ProductName'
+        Width = 200
+        FieldName = 'ProductName'
+      end    
+      item
+        Title.Caption = 'Price'
+        Width = 80
+        FieldName = 'Price'
+      end>
+    TabOrder = 0
+    OnCellClick = DBGrid1CellClick
+  end
+  object BitBtn1: TBitBtn
+    Left = 32
+    Height = 38
+    Top = 472
+    Width = 166
+    Caption = 'Show the beverages'
+    Color = clBtnShadow
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+  object RadioButton1: TRadioButton
+    Left = 354
+    Height = 24
+    Top = 96
+    Width = 54
+    Caption = 'Beer'
+    TabOrder = 2
+  end
+  object RadioButton2: TRadioButton
+    Left = 354
+    Height = 24
+    Top = 128
+    Width = 78
+    Caption = 'Whiskey'
+    TabOrder = 3
+  end
+  object RadioButton3: TRadioButton
+    Left = 354
+    Height = 24
+    Top = 160
+    Width = 58
+    Caption = 'Wine'
+    TabOrder = 4
+  end
+  object RadioButton4: TRadioButton
+    Left = 354
+    Height = 24
+    Top = 192
+    Width = 66
+    Caption = 'Vodka'
+    TabOrder = 5
+  end
+  object RadioButton5: TRadioButton
+    Left = 354
+    Height = 24
+    Top = 224
+    Width = 64
+    Caption = 'Rakija'
+    TabOrder = 6
+  end
+  object RadioButton6: TRadioButton
+    Left = 354
+    Height = 24
+    Top = 256
+    Width = 54
+    Caption = 'Rum'
+    TabOrder = 7
+  end
+  object RadioButton7: TRadioButton
+    Left = 354
+    Height = 24
+    Top = 288
+    Width = 46
+    Caption = 'Gin'
+    TabOrder = 8
+  end
+  object RadioButton8: TRadioButton
+    Left = 354
+    Height = 24
+    Top = 320
+    Width = 73
+    Caption = 'Liqueur'
+    TabOrder = 9
+  end
+  object BitBtn2: TBitBtn
+    Left = 376
+    Height = 38
+    Top = 472
+    Width = 94
+    Caption = 'Add item!'
+    OnClick = BitBtn2Click
+    TabOrder = 10
+  end
+  object Edit1: TEdit
+    Left = 354
+    Height = 28
+    Top = 392
+    Width = 124
+    TabOrder = 11
+  end
+  object Edit2: TEdit
+    Left = 354
+    Height = 28
+    Top = 432
+    Width = 124
+    TabOrder = 12
+  end
+  object Edit3: TEdit
+    Left = 488
+    Height = 28
+    Top = 555
+    Width = 100
+    TabOrder = 13
+  end
+  object Label1: TLabel
+    Left = 371
+    Height = 23
+    Top = 560
+    Width = 95
+    Caption = 'Total price :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Tw Cen MT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object BitBtn3: TBitBtn
+    Left = 624
+    Height = 28
+    Top = 555
+    Width = 94
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn3Click
+    TabOrder = 14
+  end
+  object GroupBox1: TGroupBox
+    Left = 448
+    Height = 264
+    Top = 16
+    Width = 312
+    Caption = 'Select how much from the drink you like'
+    ClientHeight = 239
+    ClientWidth = 308
+    TabOrder = 15
+    Visible = False
+    object RadioButton9: TRadioButton
+      Left = 16
+      Height = 24
+      Top = 16
+      Width = 38
+      Caption = ' 1'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -17
+      Font.Name = 'Tw Cen MT'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 0
+    end
+    object RadioButton10: TRadioButton
+      Left = 16
+      Height = 24
+      Top = 48
+      Width = 38
+      Caption = ' 2'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -17
+      Font.Name = 'Tw Cen MT'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 1
+    end
+    object RadioButton11: TRadioButton
+      Left = 16
+      Height = 24
+      Top = 80
+      Width = 38
+      Caption = ' 3'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -17
+      Font.Name = 'Tw Cen MT'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 2
+    end
+    object RadioButton12: TRadioButton
+      Left = 16
+      Height = 24
+      Top = 112
+      Width = 38
+      Caption = ' 4'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -17
+      Font.Name = 'Tw Cen MT'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 3
+    end
+    object RadioButton13: TRadioButton
+      Left = 16
+      Height = 24
+      Top = 144
+      Width = 36
+      Caption = ' 5'
+      TabOrder = 4
+    end
+    object RadioButton14: TRadioButton
+      Left = 152
+      Height = 24
+      Top = 16
+      Width = 36
+      Caption = ' 6'
+      TabOrder = 5
+    end
+    object RadioButton15: TRadioButton
+      Left = 152
+      Height = 24
+      Top = 48
+      Width = 36
+      Caption = ' 7'
+      TabOrder = 6
+    end
+    object RadioButton16: TRadioButton
+      Left = 152
+      Height = 24
+      Top = 80
+      Width = 36
+      Caption = ' 8'
+      TabOrder = 7
+    end
+    object RadioButton17: TRadioButton
+      Left = 152
+      Height = 24
+      Top = 112
+      Width = 36
+      Caption = ' 9'
+      TabOrder = 8
+    end
+    object RadioButton18: TRadioButton
+      Left = 152
+      Height = 24
+      Top = 144
+      Width = 44
+      Caption = ' 10'
+      TabOrder = 9
+    end
+    object Button1: TButton
+      Left = 64
+      Height = 47
+      Top = 181
+      Width = 98
+      Caption = 'Confirm'
+      OnClick = Button1Click
+      TabOrder = 10
+    end
+  end
+  object ListBox1: TListBox
+    Left = 480
+    Height = 259
+    Top = 280
+    Width = 304
+    ItemHeight = 0
+    TabOrder = 16
+  end
+  object Button2: TButton
+    Left = 376
+    Height = 38
+    Top = 520
+    Width = 94
+    Caption = 'Delete item'
+    OnClick = Button2Click
+    TabOrder = 17
+  end
+  object BitBtn4: TBitBtn
+    Left = 24
+    Height = 56
+    Top = 536
+    Width = 112
+    DefaultCaption = True
+    Kind = bkClose
+    ModalResult = 11
+    OnClick = BitBtn4Click
+    TabOrder = 18
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    left = 728
+    top = 24
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ProductName'
+        DataType = ftWideString
+      end    
+      item
+        Name = 'Price'
+        DataType = ftInteger
+      end>
+    Database = Form1.ODBCConnection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'select ProductName, Price'
+      'from Products'
+      'where ProductTypeIdFk = 1'
+    )
+    Params = <>
+    left = 40
+    top = 24
+  end
+  object SQLQuery2: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ProductName'
+        DataType = ftWideString
+      end    
+      item
+        Name = 'Price'
+        DataType = ftInteger
+      end>
+    Database = Form1.ODBCConnection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'select ProductName, Price'
+      'from Products'
+      'where ProductTypeIdFk = 2'
+    )
+    Params = <>
+    left = 128
+    top = 24
+  end
+  object SQLQuery3: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ProductName'
+        DataType = ftWideString
+      end    
+      item
+        Name = 'Price'
+        DataType = ftInteger
+      end>
+    Database = Form1.ODBCConnection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'select ProductName, Price'
+      'from Products'
+      'where ProductTypeIdFk = 3'
+    )
+    Params = <>
+    left = 208
+    top = 24
+  end
+  object SQLQuery4: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ProductName'
+        DataType = ftWideString
+      end    
+      item
+        Name = 'Price'
+        DataType = ftInteger
+      end>
+    Database = Form1.ODBCConnection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'select ProductName, Price'
+      'from Products'
+      'where ProductTypeIdFk = 4'
+    )
+    Params = <>
+    left = 288
+    top = 24
+  end
+  object SQLQuery5: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ProductName'
+        DataType = ftWideString
+      end    
+      item
+        Name = 'Price'
+        DataType = ftInteger
+      end>
+    Database = Form1.ODBCConnection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'select ProductName, Price'
+      'from Products'
+      'where ProductTypeIdFk = 5'
+    )
+    Params = <>
+    left = 368
+    top = 24
+  end
+  object SQLQuery6: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ProductName'
+        DataType = ftWideString
+      end    
+      item
+        Name = 'Price'
+        DataType = ftInteger
+      end>
+    Database = Form1.ODBCConnection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'select ProductName, Price'
+      'from Products'
+      'where ProductTypeIdFk = 6'
+    )
+    Params = <>
+    left = 448
+    top = 24
+  end
+  object SQLQuery7: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ProductName'
+        DataType = ftWideString
+      end    
+      item
+        Name = 'Price'
+        DataType = ftInteger
+      end>
+    Database = Form1.ODBCConnection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'select ProductName, Price'
+      'from Products'
+      'where ProductTypeIdFk = 7'
+    )
+    Params = <>
+    left = 528
+    top = 24
+  end
+  object SQLQuery8: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ProductName'
+        DataType = ftWideString
+      end    
+      item
+        Name = 'Price'
+        DataType = ftInteger
+      end>
+    Database = Form1.ODBCConnection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'select ProductName, Price'
+      'from Products'
+      'where ProductTypeIdFk = 8'
+    )
+    Params = <>
+    left = 608
+    top = 24
+  end
+  object DataSource2: TDataSource
+    DataSet = SQLQuery2
+    left = 728
+    top = 96
+  end
+  object DataSource3: TDataSource
+    DataSet = SQLQuery3
+    left = 728
+    top = 168
+  end
+  object DataSource4: TDataSource
+    DataSet = SQLQuery4
+    left = 728
+    top = 240
+  end
+  object DataSource5: TDataSource
+    DataSet = SQLQuery5
+    left = 728
+    top = 312
+  end
+  object DataSource6: TDataSource
+    DataSet = SQLQuery6
+    left = 728
+    top = 384
+  end
+  object DataSource7: TDataSource
+    DataSet = SQLQuery7
+    left = 728
+    top = 456
+  end
+  object DataSource8: TDataSource
+    DataSet = SQLQuery8
+    left = 728
+    top = 520
+  end
+end
