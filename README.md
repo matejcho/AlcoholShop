@@ -1,1 +1,2 @@
 # AlcoholShop
+This is a desktop application made in Lazarus, written in Pascal. It's for ordering alcohol. When you open the application, firstly you need to create account in order to make orders. After you have created the account, you are redirected to the login view to be authenticated. If the user is administrator then s/he can add, edit and delete baverages to the list and add, edit and delete accounts. 
